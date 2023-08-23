@@ -11,10 +11,10 @@
       <div class="inner-container">
         <% if(locals.count > 0) { %>
         <img src="<%= img%>" alt="Hot dog" />
-        <h1>Hot Dog</h1>
+        <h1 class="response-message positive">Hotdog</h1>
         <% }else { %>
         <img src="<%= img%>" alt="Not Hot dog" />
-        <h1>Not Hot Dog</h1>
+        <h1 class="response-message negative">Not Hotdog</h1>
         <% } %>
 
         <form action="/" enctype="multipart/form-data" method="post">
