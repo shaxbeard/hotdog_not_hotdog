@@ -4,6 +4,12 @@
     <title>Hot dog not hot dog</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,17 +17,83 @@
       <div class="inner-container">
         <% if(locals.count > 0) { %>
         <img src="<%= img%>" alt="Hot dog" />
-        <h1 class="response-message positive">Hotdog</h1>
-        <% }else { %>
-        <img src="<%= img%>" alt="Not Hot dog" />
-        <h1 class="response-message negative">Not Hotdog</h1>
-        <% } %>
+        <div class="response-message positive">Hotdog</div>
+        <div class="my-test-class">
+          <!-- <i class="fas fa-check-circle" style="color: #4bae4f"></i> -->
+        </div>
+        <div class="response-icon-container positive">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="90px"
+            viewBox="0 0 512 512"
+          >
+            <style>
+              .circle {
+                fill: #4faf4c; /* Green color for the surrounding circle */
+              }
+
+              .checkmark {
+                fill: #ffffff; /* White color for the checkmark */
+              }
+            </style>
+            <!-- Circle -->
+            <path
+              class="circle"
+              d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248z"
+            />
+
+            <!-- Checkmark -->
+            <path
+              class="checkmark"
+              d="M227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+            />
+          </svg>
+        </div>
 
         <form action="/" enctype="multipart/form-data" method="post">
           <input type="file" name="file-to-upload" />
           <input type="submit" value="Upload" />
         </form>
+        <% }else { %>
+        <div class="">
+          <img src="<%= img%>" alt="Not Hot dog" />
+          <div class="response-message negative">Not Hotdog</div>
+          <!-- <img src="./imgs/incorrect.png" class="response-icon negative" /> -->
+          <div class="response-icon-container negative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="90px"
+              viewBox="0 0 512 512"
+            >
+              <style>
+                .circle {
+                  fill: #ff0000; /* Red color for the surrounding circle */
+                }
+
+                .x-mark {
+                  fill: #ffffff; /* White color for the X */
+                }
+              </style>
+              <!-- Circle -->
+              <circle class="circle" cx="256" cy="256" r="248" />
+
+              <!-- X -->
+              <path
+                class="x-mark"
+                d="M377.6 321.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"
+              />
+            </svg>
+          </div>
+        </div>
+        <form action="/" enctype="multipart/form-data" method="post">
+          <input type="file" name="file-to-upload" />
+          <input type="submit" value="Upload" />
+        </form>
+        <% } %>
       </div>
+      <!-- <div class="flex-container">
+        <img src="./imgs/vintage-sign.png" class="hero-img" />
+      </div> -->
     </div>
   </body>
 </html>

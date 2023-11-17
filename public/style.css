@@ -11,8 +11,8 @@ img {
 }
 .response-message {
   position: absolute;
-  top: -31px;
-  left: 2px;
+  top: 0px;
+  left: 0px;
   font-size: 3em;
   width: 100%;
   text-align: center;
@@ -21,10 +21,46 @@ img {
   text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
     3px 3px 0 #000;
   letter-spacing: 2px;
+  padding: 10px 0;
 }
 .response-message.positive {
-  background: lightgreen;
+  background: #4bae4f;
 }
 .response-message.negative {
   background: red;
 }
+
+/* .my-test-class {
+  font-size: 5em;
+} */
+.response-icon {
+  width: 90px;
+  position: absolute;
+  top: 106px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.response-icon.positive {
+  background: white;
+  border-radius: 200px;
+}
+
+.response-icon.negative {
+  top: 102px;
+  width: 120px;
+}
+
+.response-icon-container {
+  position: absolute;
+  top: 106px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .fa-check-circle {
+  width: 90px;
+  position: absolute;
+  top: 106px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */

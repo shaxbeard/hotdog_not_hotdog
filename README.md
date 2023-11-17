@@ -21,3 +21,7 @@
 # Run
 
 `npm start`
+
+# Project Description
+
+This app is a re-creation of the Seefood app from the show, Silicon Valley. Like the app in the show, this app can only tell you if something in a photo is either a hot dog or NOT a hot dog. Unlike the app in the show, this app has access to a Machine Learning model that is actually identifying all of the objects in the photo. To check whether or nor there is a hot dog in the photo, I am simply checking if "hot dog" is one of the items on the list of contents.
